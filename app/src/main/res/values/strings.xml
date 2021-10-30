@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidLabs3_2</string>
+    <string name="first_activity">First Activity</string>
+    <string name="to_second">To second</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="to_first">To first</string>
+    <string name="to_third">To third</string>
+    <string name="third_activity">Third Activity</string>
+    <string name="about_activity">About Activity</string>
+    <string name="to_about">about</string>
+</resources>
