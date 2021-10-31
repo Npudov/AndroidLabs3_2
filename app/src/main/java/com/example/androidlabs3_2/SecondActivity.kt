@@ -39,13 +39,6 @@ class SecondActivity : AppCompatActivity() {
         }
     }
 
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            finish()
-        }
-    }*/
-
     private var resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
@@ -59,6 +52,5 @@ class SecondActivity : AppCompatActivity() {
 
     private fun toThird() {
         resultLauncher.launch(Intent(this, ThirdActivity::class.java))
-        //startActivityForResult(Intent(this, ThirdActivity::class.java))
     }
 }
