@@ -8,17 +8,18 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import com.example.androidlabs3_2.databinding.ActivityThirdBinding
 
-class ThirdActivity : AppCompatActivity() {
+open class ThirdActivity : AppCompatActivity() {
     private lateinit var binding: ActivityThirdBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toFirst.setOnClickListener {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.bnToFirst.setOnClickListener {
             toFirst()
         }
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             toSecond()
         }
     }
@@ -46,5 +47,10 @@ class ThirdActivity : AppCompatActivity() {
 
     private fun toSecond() {
         finish()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return super.onSupportNavigateUp()
     }
 }
